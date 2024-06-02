@@ -49,11 +49,11 @@ The file `trace_code.txt` wraps all do-files in an tag, with an attribute indica
 
 # HeracleSplit -- Reconstruct the Integrated File
 
-One the merged file is brought out of the data center, use the command `heraclesplit` to reconstruct the entire folder:
+Once the merged file is brought out of the data center, use the command `heraclesplit` to reconstruct the entire project folder created by `hydramerge`:
 
 ```
 local wd = "(your target directory)"
 heraclesplit using trade_code.txt, todir("`wd'")
 ```
 
-This command then creates a replication of the original project folder originally located in the data center.
+This command then creates a replication of the original project.

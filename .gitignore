@@ -1,6 +1,9 @@
 # .gitignore file for git projects containing Stata files
 # Commercial statistical software: http://www.stata.com
 
+.DS_Store
+
+
 # Stata dataset and output files
 *.dta
 *.gph
