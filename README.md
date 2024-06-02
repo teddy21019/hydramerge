@@ -4,13 +4,13 @@
 
 # Why Even Bother Doing This?
 
-While its functionality may seem superfluous, this packages is extremely useful if exporting a project from a restricted data center necessitates substantial amount of paperwork, which grows proportionally with the file count.
+While its functionality may seem superfluous, this packages is extremely useful if exporting a project from a restricted data center necessitates substantial amount of paperwork, which increases proportionally with the file count.
 
-Empirical research typically involves multiple do-files with specific tasks, such as data wrangling, descriptive statistics, baseline analysis and some robustness checks. For a well designed Stata project, such as those published in the top-tier journals, do-files are written with high-coheision, where each do-file concentrates in one dedicated task. This design usually comes with even more separated do files which are integrated in a master do-file.
+Empirical research typically involves multiple do-files, each dedicated to  specific tasks like data wrangling, descriptive statistics, baseline analysis and robustness checks. In a well designed Stata project, such as those published in top-tier journals, do-files are written with high-cohesion, where each do-file concentrates on a singular task. This design usually results in a greater number of do files, alll orchestrated through a master do-file.
 
-To reduce time in filling in the paperwork, it is optimal to integrate all files into a single text file. This could be done manually, but as the project expands, with files locating in subfolders within subfolders, this process can be annoying and error-prone.
+To minimize the time spent on paperwork, it is advisable to consolidate all files into a single text file. While this could be accomplished manually, the task becomes tedious and susceptible to errors as the project grows and files are nested with multiple folders.
 
-To automate this procedure, I developed two simple commands -- `hydramerge` and `heraclesplit`.
+To automate this procedure, I developed two simple commands -- `hydramerge` and `heraclesplit`, akin to Hydra's multiple heads and Heracles' legendary feats drawn on the Greek mythology.
 
 # HydraMerge -- Integrating files
 
