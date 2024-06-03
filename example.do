@@ -10,4 +10,4 @@ heraclesplit using project_code.txt, todir("`cwd'/test_target")
 
 * Must add force if folder contains files or dirs.
 * Use this command carefully as this cocatenates on old files.
-heraclesplit using project_code.txt, todir("$cwd/test_target")
+heraclesplit using project_code.txt, todir("$cwd/test_target") force
