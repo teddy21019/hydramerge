@@ -58,3 +58,7 @@ heraclesplit using trade_code.txt, todir("`wd'")
 ```
 
 This command then creates a replication of the original project.
+
+# Future Work
+- Beyond `.do` files. Currently the command supports only do files. I haven't found a way to let `local dlist: dir "xxx" files "*" work with other filespec.
+- A `.gitignore` like functionality that ignores files matching certain pattern. (Looking for a `Stata` implementation)
