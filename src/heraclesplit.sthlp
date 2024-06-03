@@ -6,7 +6,7 @@
 
 {p}
 
-{cmd:heraclesplit} {cmd:using} {it:filename}, {opt todir(string)}
+{cmd:heraclesplit} {cmd:using} {it:filename}, {opt todir(string)} [{opt force}]
 
 {title:Description}
 
@@ -18,12 +18,16 @@
 
 {phang}{opt todir(string)} specifies the target directory to reconstruct the original folder structure. This option is required.
 
+{phang}{opt force} forces the command to proceed regardless of existing folder {opt todir}.
+
+
 {title:Example}
 
 {hline}
 
 
 {phang2}{cmd:. local wd = "(your target directory)"}
+
 {phang2}{cmd:. heraclesplit using trade_code.txt, todir("`wd'")}
 
 {pstd}This command reconstructs the original folder structure in the specified target directory.

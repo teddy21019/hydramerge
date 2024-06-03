@@ -3,7 +3,25 @@ program define heraclesplit
 	cap	file close toread
 	cap file close dofile
 
-	syntax using/, todir(str)
+	syntax using/, Todir(string) [force]
+
+	cap mkdir "`todir'"
+	local dir_exist = _rc != 0
+
+	local  dlist: dir "`todir'" dirs "*"
+	local  flist: dir "`todir'" file "*.do"
+	local dir_not_empty = `"`dlist'`flist'"' != ""
+
+	if (`dir_not_empty'){
+		if "`force'" == ""{		// if no option force
+			di as error "Folder `todir' already exist!  Please specify option {opt force} to force procedere. Note that contents might be concatenating on existing files."
+			error 602
+		}
+		else{
+			di as error "WARNING!!! Folder `todir' already exist! Contents might be concatenating on existing files. "
+		}
+	}
+
 	file open toread using "`using'", read
 
 	file read toread line
