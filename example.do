@@ -1,8 +1,13 @@
 * start from the current directory
-local cdir = "C:\Users\tedb0\Documents\Code\manydo"
 
-cd "C:\Users\tedb0\Documents\Code"
+// cd "project file"
 
-* list all files
-hydramerge, fromdir("`cdir'") saving(dirs) replace
-heraclesplit using dirs.txt, todir("C:\Users\tedb0\Documents\Code\recovermanydo")
+local cwd: pwd
+
+hydramerge, fromdir(test_source) saving (project_code) replace
+heraclesplit using project_code.txt, todir("`cwd'/test_target")
+
+
+* Must add force if folder contains files or dirs.
+* Use this command carefully as this cocatenates on old files.
+heraclesplit using project_code.txt, todir("$cwd/test_target")
