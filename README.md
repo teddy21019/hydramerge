@@ -1,8 +1,9 @@
 # HydraMerge and HeracleSplit
+![](https://repository-images.githubusercontent.com/808578896/dfcd4f20-17a0-4f09-94d0-f6d338e870a7)
 
 `hydramerge` is a lightweight Stata program that integrates all source code from a folder and its subfolders into a single text file. The package also provides a decoder, `heraclesplit`, to reconstruct the project structure from the combined text file.
 
-# Why Even Bother Doing This?
+# Why Even Bother?
 
 While its functionality may seem superfluous, this packages is extremely useful if exporting a project from a restricted data center necessitates substantial amount of paperwork, which increases proportionally with the file count.
 
